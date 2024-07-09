@@ -1,4 +1,4 @@
-
+@login
 Feature: Login To Page
 
   Scenario: Users with valid credentials should login to application
