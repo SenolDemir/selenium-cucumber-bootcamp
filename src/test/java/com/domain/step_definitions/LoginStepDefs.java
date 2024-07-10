@@ -8,6 +8,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 
 public class LoginStepDefs {
 
@@ -41,5 +42,28 @@ public class LoginStepDefs {
         Assert.assertEquals(url, Driver.get().getCurrentUrl());
 
     }
+
+
+    @When("the user enter invalid {string} and {string}")
+    public void theUserEnterInvalidAnd(String username, String password) {
+
+        loginPage.login(username, password);
+    }
+
+
+    @Then("the user should not login to app")
+    public void theUserShouldNotLoginToApp(){
+
+
+        String expectedMessage = Driver.get()
+                .findElement(By.xpath("//p[@class='oxd-text oxd-text--p oxd-alert-content-text']"))
+                .getText();
+        Assert.assertEquals(expectedMessage, "Invalid credentials");
+
+        String url = "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index";
+        Assert.assertNotEquals(url, Driver.get().getCurrentUrl());
+    }
+
+
 
 }

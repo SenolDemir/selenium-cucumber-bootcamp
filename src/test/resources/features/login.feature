@@ -7,3 +7,17 @@ Feature: Login To Page
     Then user should login to application
 
 
+  Scenario Outline: Users with invalid credentials should not login to app
+    Given navigate to login page
+    When the user enter invalid "<username>" and "<password>"
+
+    Then the user should not login to app
+    Examples:
+      | username | password |
+      | Admin    | Admin    |
+      | admin    | admin12  |
+      | admin    | admin    |
+      | test     | test     |
+
+
+
