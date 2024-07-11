@@ -1,3 +1,4 @@
+@smoke
 Feature: PIM Page Functions
 
   Background:  login to app
