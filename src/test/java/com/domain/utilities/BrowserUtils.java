@@ -146,6 +146,14 @@ public class BrowserUtils {
         return wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
 
+    public static void waitFor(int seconds) {
+        try {
+            Thread.sleep(seconds * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
     /**
      * waits for backgrounds processes on the browser to complete
      *

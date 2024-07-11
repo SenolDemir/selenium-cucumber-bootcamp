@@ -48,6 +48,8 @@ public class LoginStepDefs {
     public void theUserEnterInvalidAnd(String username, String password) {
 
         loginPage.login(username, password);
+        BrowserUtils.waitFor(2);
+
     }
 
 
