@@ -9,6 +9,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
@@ -61,9 +62,14 @@ public class Driver {
                     break;
                 case "remote_chrome":
                     ChromeOptions chromeOptions = new ChromeOptions();
-                    chromeOptions.setCapability("platform", Platform.ANY);
+                    chromeOptions.addArguments("--no-sandbox");
+                    chromeOptions.addArguments("--disable-dev-shm-usage");
+                    // Showing a test name instead of the session id in the Grid UI
+                    chromeOptions.setCapability("se:name", "My simple test");
+                    chromeOptions.setCapability("se:sampleMetadata", "Sample metadata value");
+
                     try {
-                        driverPool.set(new RemoteWebDriver(new URL("http://54.85.94.31:4444/wd/hub"),chromeOptions));
+                        driverPool.set(new RemoteWebDriver(new URL("http://localhost:4444"),chromeOptions));
                         // above URL is ec2 machine with docker-grid
                         // http://3.238.26.132:4444/
                         // for running tests in local machine with Selenium Grid
