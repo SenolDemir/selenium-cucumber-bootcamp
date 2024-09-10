@@ -1,14 +1,20 @@
 # Selenium - Cucumber Bootcamp Project
 
-## requirements  
+- Build Tool: Maven
+- Test Framework: Cucumber BBD (with JUnit Assertions)
+- Framework design is based on Page Object Model
 
-## environment
+## System Requirements
+Java 8+ JDK
+Apache Maven (to be able to run tests by command line)
+
+## Environment
+https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
 
 
 
-
-### remote driver
-it is created to use with selenium grid in local or in any remote url like ec2 instance
+### Remote driver
+it is created to use with selenium grid in local or in any other urls
 
 
 
