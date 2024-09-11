@@ -15,8 +15,6 @@ Feature: Data Driven Test
       | System             |
 
 #   Parameterization without Example Keyword
-#   Alltaki seneryoda yine example kullanmadan data aliniyor.
-#   Bu kez map ile alinip birinci sutunlar key olarak kullaniliyor
   Scenario: login with valid credentials
     Given the user is on the login page
     When the user logs in using following credentials

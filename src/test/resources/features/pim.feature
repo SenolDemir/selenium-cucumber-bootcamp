@@ -1,3 +1,4 @@
+@pim
 Feature: PIM Page Functions
 
   Background:  login to app and navigate to module
@@ -9,7 +10,7 @@ Feature: PIM Page Functions
     When User enter employee information
     Then new employee should be added to list
 
-  @pim
+
   Scenario Outline: Authorized user should add multiple new employee
     And user click to add employee page
     When User enter employee informations as "<firstname>", "<middlename>", "<lastname>"
