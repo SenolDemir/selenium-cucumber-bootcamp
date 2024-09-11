@@ -1,7 +1,7 @@
 # Selenium - Cucumber Bootcamp Project
 
-- Build Tool: Maven
-- Test Framework: Cucumber BBD (with JUnit Assertions)
+- Build Tool: Maven  
+- Test Framework: Cucumber BBD (with JUnit Assertions)  
 - Framework design is based on Page Object Model and Singleton Pattern
 
 ## System Requirements
@@ -9,17 +9,35 @@ Java 8+ JDK
 Apache Maven (to be able to run tests by command line)
 Docker (in case of Dockerization of test project)
 
+## Recommended Plugin for IDE (for IntelliJ IDEA)
+1 - Cucumber for Java from JetBrains  
+2 - Gherkin from JetBrains
+
 ## Environment
-https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+https://opensource-demo.orangehrmlive.com/web/index.php/auth/login 
+
+## Running Test
+
+
+### Failed Test Runner
+Within Maven Life Cycle failed tests will be re-run.  
+Als this file can be used to re-run failed tests. 
 
 
 ## Report Generation
 To generate "HTML Maven Cucumber Report":
-- Open Maven right side panel  
+- open Maven right side panel  
 - Double Click Project's Lifecycle  
-- Click "verify"
+- click "verify"
 - or in the root folder of project give the command `mvn verify`  
-- It can be reached under target folder
+
+### Report Locations
+**Default Cucumber HTLM Reports**  
+target -> default-html-reports
+
+**Cucumber HTML Plugin Reports**  
+target -> cucumber-html-reports > open any html file
+
 
 
 ## Dockerization
@@ -28,8 +46,8 @@ To generate "HTML Maven Cucumber Report":
 The driver should be RemoteWebDriver  
 and url should be http://localhost:4444
 
-Create DockerFile of project in root folder  
-Create Docker Image of project within root folder
+Create DockerFile of project in root folder   
+Create Docker Image of project within root folder by following command:  
 ```
 docker build -t {nameofimage} .
 ```
