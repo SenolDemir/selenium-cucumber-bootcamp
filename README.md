@@ -5,9 +5,9 @@
 - Framework design is based on Page Object Model and Singleton Pattern
 
 ## System Requirements
-Java 8+ JDK
-Apache Maven (to be able to run tests by command line)
-Docker (in case of Dockerization of test project)
+Java 8+ JDK  
+Apache Maven (to be able to run tests by command line)  
+Docker (in case of Dockerization of test project)  
 
 ## Recommended Plugin for IDE (for IntelliJ IDEA)
 1 - Cucumber for Java from JetBrains  
@@ -27,7 +27,7 @@ Als this file can be used to re-run failed tests.
 ## Report Generation
 To generate "HTML Maven Cucumber Report":
 - open Maven right side panel  
-- Double Click Project's Lifecycle  
+- double Click Project's Lifecycle  
 - click "verify"
 - or in the root folder of project give the command `mvn verify`  
 
